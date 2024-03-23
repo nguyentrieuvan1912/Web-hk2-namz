@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .boxl{
+            height: 750px;
+            width: 700px;
+            background-color:rgb(153, 205, 253);
+            margin: 0px auto;
+            padding: 0px ;
+        }
+        h2{
+            text-align: center;
+            margin-top: 40px;
+            font-weight: bold;
+        }
+        img{
+            height: 80px;
+            width:270px ;
+            padding-top: 5px;
+            margin-left: 200px;
+            display: block;
+            box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+        }
+        #giua{
+            margin-left: 200px;
+        }
+        ul{
+            margin-left: 25px;
+            list-style-type: none;
+            
+        }
+        li{
+            margin-bottom: 7px;
+        }
+        hr {
+            width: 575px;
+            margin-left: -2px;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+        #address.li{
+            margin-left: 120px;
+            width: 210px;
+        }
+        #fn.li{
+            margin-left: 125px;
+            width: 110px;
+        }
+        #city.li{
+            margin-left: 165px;
+            width: 140px;
+        }
+        #Comments{
+            margin-left: 110px;
+            width: 370px;
+            height: 100px;
+        }
+        
+ 
+    </style>
+</head>
+<body>
+    <div class="boxl">
+        <img src="..//images/jackson.jpg" alt="logo" >
+        <h2>Registration Form</h2>
+        <p id="giua">Register your Jackson Elctronics product here</p>
+        <ul>
+            <li>First name:<input class="li" id="fn"> Last Name: <input style="width: 120px;"></li>
+            <li>Address #1:<input class="li" id="address"></li>
+            <li>Address #2:<input class="li" id="address"></li>
+            <li>City:<input class="li" id="city">State: <input style="width: 40px;">Zip: <input style="width: 70px;"></li>
+            <li>Country:
+                <select style="margin-left: 137px ;height: 22px;width: 147px;">
+                    <option value="use">United States</option>
+                    <option value="canada">Canada</option>
+                    <option value="mexico">Mexico</option>
+                </select>
+            </li>
+            <hr>
+            <li>Product:
+                <select style="margin-left: 137px ;height:22px;width: 120px;">
+                    <option value="use">ScanMaster</option>
+                </select>
+            </li>
+            <li>Date Purchased:<input style="margin-left: 90px;width: 140px;"></li>
+            <li>Serial #:<input style="margin-left: 140px;width: 140px;"></li>
+            <li>Used for:
+                <input type="radio" name="Used for" style="margin-left: 130px;">Home
+                <input type="radio" name="Used for" style="margin-left: 100px;">Educational Isntitution
+                <input type="radio" name="Used for" style="margin-left: 194px;">Business
+                <input type="radio" name="Used for" style="margin-left: 82px;">Other
+                <br>
+                <input type="radio" name="Used for" style="margin-left: 194px;">Govemment
+            </li>
+            <li >System (check all that apply):
+                <input type="checkbox" name="System" style="margin-left: 0px;height: 15px;width: 15px;">Windown
+                <input type="checkbox" name="System" style="margin-left: 73px;height: 15px;width: 15px;">UNIX
+                <br>
+                <input type="checkbox" name="System" style="margin-left: 195px;height: 15px;width: 15px;">Macintosh
+                <input type="checkbox" name="System" style="margin-left: 68px;height: 15px;width: 15px;">Other
+            </li>
+            <hr>
+            <li><m>Comments?:</m>
+                <input id="Comments">
+            </li>
+            <button style="margin-left: 180px;">Click to register</button>
+            <button>Click to Cancel</button>
+            
+        </ul>
+    </div>
+</body>
+</html>

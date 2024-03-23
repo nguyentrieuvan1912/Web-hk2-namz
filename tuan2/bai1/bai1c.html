@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .wrapper{
+            position: relative;
+            height: 830px;
+            width: 1200px;
+            border: 1px solid palevioletred;
+        }
+        .header{
+            height: 56px;
+            line-height: 56px;
+        }
+        .header .title{
+            text-align: center;
+            font-weight:  bold;
+            font-size: 20px;
+            font-style: italic;
+            color:rgb(146, 44, 61);
+            text-shadow: 0 15px 10px rgb(146, 44, 61);
+        }
+        .nav{
+          height: 40px;
+          border: 0.5px solid palevioletred;
+          background-color: rgb(237, 147, 150);
+          /* làm cho Starter k bị đẩy ra giữa  */
+          display: flex;
+         
+        }
+    
+        
+        .nav li{
+            display: inline;
+         
+        }
+        .vertical-line{
+            height: 30px;
+            width: 1px;
+            background-color: blue;
+            margin: 3px 0;
+        }
+        .nav li a,
+        .home{
+            text-decoration: none; 
+            margin: 0 30px;
+           line-height: 40px;
+           float: left;
+        }
+    
+        .home{
+            position: relative;
+            width: 50px;
+        }
+        .home i{
+            position: absolute;
+            right: 0;
+            top: 0;
+         
+        }
+        .search {
+           line-height: 40px;
+        }
+        .starter .title,
+        .desserts .title,
+        .information
+        {
+            width:310px;
+            font-size: 30px;
+            color: rgb(213, 34, 64);
+            font-weight: bold;
+            background-color: rgb(237, 147, 150);
+            text-align: center;
+            margin-left: 200px;
+            letter-spacing: 15px;
+        }
+        .starter-list .list{
+            display: block;position: relative;
+        }
+        .starter-list .list li{
+            margin-left: 40px;
+        }
+        #red{
+            display: inline;
+            font-weight: bold;
+            color: red;
+        }
+    
+        .body{
+            position: relative;
+            display: flex;
+            height: 650px;
+            margin-top: 10px;
+        }
+        .body .left
+        {
+            display: inline-block;
+            width: 250px;
+            height: 100%;
+            
+        }
+        .body .center{
+            display: block;
+            width: 700px;
+            height: 100%;
+            background-color: azure;
+           position: relative;
+        }
+        .wid-40p,
+        select{
+            width: 40%;
+            height: 40px;
+            margin: 15px;
+        }
+        .bt{
+            height: 30px;
+            width: 100%;
+        }
+        .bt button{
+            margin-left: 15px;
+            line-height: 30px;
+        }
+        .footer{
+            width: 100%;
+            text-align: center;
+            background-color: rgb(237, 147, 150);
+            height: 73px;
+            font-style: italic;
+            line-height: 73px;
+        }
+        .list-left li{
+            width: 90%;
+            border-radius: 20px;
+            background-color: rgb(237, 147, 150);
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+        .list-left li a{
+            text-decoration: none;
+        }
+    
+        .left img {
+            width: 95%;
+            border-radius: 100px;
+        }
+        .right{
+            height: 90%;
+            background-color: black;
+            width: 250px;
+        }
+        .img-right img{
+            width: 80%;
+            height: auto;
+        }
+    
+        h2{
+           color: aliceblue;
+           font-size: 15px;
+        }
+        .g1,.g2{
+            margin: 60px 0px 60px 50px;
+            height: 40%;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <p class="title">EXAMPLE CAFE MENU</p>
+        </div>
+        <div class="nav">
+            <div class="home"><img src="..//bai1/img/icons8-home-50.png" alt="" style="width: 20px;height: 20px;"></li></div>
+            <div class="vertical-line"></div>
+            <ul class="options">
+                <li><a href="#" style="color: white;">Starter</a></li>
+                <li><a href="#" style="color: white;">Main Coures</a></li>
+                <li><a href="#" style="color: white;">Desserts</a></li>
+            </ul>
+            <div class="vertical-line"></div>
+
+            <div class="search"><input type="text" style="margin-left: 10px;">
+                <button>Go</button>
+            </div>
+        </div>
+        <div class="body">
+            <div class="left">
+                <div class="list-left">
+                    <ul>
+                        <li><a href="#" style="color: white;">Cafe Latte</a></li>
+                        <li><a href="#" style="color: white;">Capuchino</a></li>
+                        <li><a href="#" style="color: white;">Ocean Blue</a></li>
+                        <li><a href="#" style="color: white;">Ice-cream Cafe</a></li>
+                        <li><a href="#" style="color: white;">Order Online</a></li>
+                    </ul>
+                </div>
+                <div class="anh1">
+                <img src="..//bai1/img/company.png" alt="">
+                </div>
+            </div>
+            <div class="center">
+                <div class="starter">
+                    <p class="title">Starter</p>
+                    <div class="starter-list">
+                        <ul class="list">
+                            <li>Chesnut and Mushroom Goujons <p id="red">(v)</p></li>
+                            <li>Goat Cheese <p id="red">(v)</p></li>
+                            <li>HONEY SOY CHICKEN KEBABS <p id="red">(V)</p></li>
+                            <li>Seafood Salad <p id="red">(v)</p></li>
+                        </ul>
+                    </div>
+                    <div class="btt"><a href="" id="red">Back to Top</a></div>
+                </div>
+                <div class="desserts">
+                    <p class="title">Desserts</p>
+                    <div class="starter-list">
+                        <ul class="list">
+                            <li>Lemon Sorbet <p id="red">(v)</p></li>
+                            <li>Chocolate Mud Pie <p id="red">(v)</p></li>
+                            <li>Pecan Pie <p id="red">(V)</p></li>
+                            <li>Selection of fine Cheese form Around the World <p id="red">(v)</p></li>
+                        </ul>
+                    </div>
+                    <div class="btt"><a href="" id="red">Back to Top</a></div>
+                </div>
+                <p class="information">Information</p>
+                <input placeholder="First Name" type="text"  class="wid-40p">
+                <input placeholder="Last Name" type="text" class="wid-40p">
+                <input placeholder="Email" type="text" class="wid-40p">
+                <input placeholder="Telephone" type="text" class="wid-40p">
+                <select name="country" class="wid-40p">
+                    <option value="USA">USA</option>
+                    <option value="Viet Name">Viet Nam</option>
+                    <option value="China">China</option>
+                </select>
+                <input name="a1" class="tick" type="radio">Vietnamese
+                <input name="a1" class="tick" type="radio">Foreigner
+                <textarea style="margin: 15px;" name="comment" id="" cols="78" rows="3"></textarea>
+                <div   class="bt">
+                    <button>Submit</button>
+                    <button>Cancel</button>
+                </div>
+
+            </div>
+            <div class="right">
+                <div class="title" style="color: aliceblue;font-size: 30px;">Events</div>
+                
+                <div class="g1">               
+                    <div class="img-right">
+                        <h2>Regular Mettings</h2>
+                        <img src="..//bai1/img/meeting.png" alt="">
+                    </div>
+                    <p style="color: aliceblue; font-size: 15px;">Host your regular learn meetings or activites... <a style="text-decoration: none;" href="">Read more</a></p>
+                </div>
+
+                <div class="g2">
+                    <div class="img-right">
+                        <h2>Product Launches</h2>
+                        <img src="..//bai1/img/launch.png" alt="">
+                    </div>
+                    <p style="color: aliceblue; font-size: 15px;">Launch your product with people on a space... <a style="text-decoration: none;" href="">Read more</a></p>
+                </div>
+            </div>
+            
+        </div>
+        <div class="footer">
+            <p>ABC Company <i class="ti-themify-favicon-alt"></i> -12345678 -abccoffee@gmail.comment</p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="..//css/bootstrap.min.css">
+    <script src="..//js/jquery-3.7.1.min.js"></script>
+    <script src="..//js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div>
+        <form action="">
+            <table>
+                <h3>Thong tin dang ky</h3>
+                <tr>
+                    <td>ho ten</td>
+                    <td><input id="hten" type="text"></td>
+                </tr>
+                <tr>
+                    <td>mk</td>
+                    <td><input id="mk" type="text"></td>
+                </tr>
+            </table>
+        </form>
+        <input type="button" value="xac nhan" onclick="dangky()">
+
+        <p>thong tin dang ky</p>
+        <div>
+            <tr>
+                <td>ho ten</td>
+                <td>mk</td>
+            </tr>
+            <tr>
+                <p id="name"></p>
+                <p id="pass">s</p>
+            </tr>
+        </div>
+    </div>
+   
+    <script>
+        function dangky(){
+            let ten = prompt("ho ten","ten");
+            let mk = prompt("pass","mk");
+
+
+            document.getElementById("name").innerHTML = ten;
+            document.getElementById("pass").innerHTML = mk;
+        }
+    </script>
+</body>
+</html>

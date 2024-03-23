@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <form action="">
+        <fieldset>
+            <legend>Your messages:</legend>
+            <label for="to">To:</label>
+            <input type="text" id="to" name="to"><br><br>
+            <label for="email">Your email:</label>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="message">Messages:</label>
+            <textarea name="message" id="message" cols="50" rows="10"></textarea><br><br>
+            <label for="attach-file">Attach File:</label>
+            <input type="file" name="file" id="file">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>How you found us:</legend>
+            <label for="how">How did you hear of us:</label>
+            <select name="how" id="how">
+                <option value="Google">Google</option>
+                <option value="Facebook">Facebook</option>
+                <option value="YouTube">YouTube</option>
+                <option value="Instagram">Instagram</option>
+                <option value="Others">Others</option>
+            </select><br><br>
+            <label for="newsletter">Newsletter</label>&emsp;&emsp;&emsp;&emsp;&emsp;
+            <input type="checkbox">Ensure this box is checked if you would like to receive email updates
+        </fieldset>
+        <button type="button">Send message</button>
+    </form>
+</body>
+</html>

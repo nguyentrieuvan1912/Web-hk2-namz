@@ -1,0 +1,162 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    height: 1020px;
+    width: 100%;
+    background-image: linear-gradient(#6bc9eb,#5da5ef);
+}
+
+.header {
+    height: 100px;
+    position: relative;
+    border-bottom: 10px dotted #fff;
+}
+
+.nav {
+    float: left;
+    width: 75%;
+}
+
+.nav li {
+    float: left;
+    list-style-type: none;
+    text-align: center;
+    height: 100px;
+    width: 15%;
+}
+
+.nav li a {
+    text-decoration: none;
+    line-height: 100px;
+    font-weight: bold;
+    color: white;
+    font-size: 30px;
+}
+
+.title h2 {
+    position: absolute;
+    font-size: 60px;
+    right: 50px;
+    font-weight: bold;
+    color: azure;
+    text-shadow: blue 0px 0px 15px;
+    line-height: 100px;
+}
+
+.content {
+    width: 100%;
+    margin: 30px 0;
+    display: flex;
+}
+
+.left {
+    width: 50%;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.name {
+    margin: 10px 0;
+    font-size: 60px;
+    color: #fff;
+}
+
+.left p {
+    color: #fff;
+    font-size: 25px;
+}
+
+.input {
+    margin: 0px 60px;
+}
+
+.input b {
+    color: #fff;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.input input {
+    border-radius: 10px;
+    width: 400px;
+    height: 30px;
+}
+
+table tr{
+    margin: 10px;
+}
+
+.input select {
+    border-radius: 7px;
+    height: 30px;
+}
+
+td {
+    width: 340px;
+    color: #fff;
+    font-size: 25px;
+}
+
+.input .rq {
+    height: 160px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.input .submit {
+    height: 25px;
+    width: 65px;
+    border-radius: 7px;
+    border: 2px dashed #000;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.input .reset {
+    height: 25px;
+    width: 60px;
+    border-radius: 7px;
+    border: 2px dashed #000;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.right {
+    width: 50%;
+}
+.img {
+    margin-top: 20px;
+    width: 700px;
+}
+
+.letter {
+    margin-left: 80px;
+}
+.style {
+    text-shadow: blue 5px 5px 1px;
+    font-size: 50px;
+    color: blue;
+    margin-left: 5px;
+}
+
+.des {
+    font-size: 35px;
+    color: blue;
+    font-weight: bold;  
+    margin-left: 30px;
+}
+
+.footer {
+    border-top: 10px dotted #fff;
+    text-align: center;
+
+}
+
+.footer b {
+    font-size: 25px;
+    color: white;
+}

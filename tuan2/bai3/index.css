@@ -1,0 +1,127 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    height: 1500px;
+    border: 1px solid black;
+    background-image: url(..//bai3/img/background.jpg);
+}
+.main{
+    height: 90%;
+    margin: 10px;
+    position: relative;
+}
+
+.logo{
+    height:150px;
+    width: 95%;
+    margin: 20px;
+    position: relative;
+}
+.logo>img{
+    max-height: 150px;
+    position: absolute;
+    bottom: 0;
+}
+.content{
+    height: 85%;
+    width: 95%;
+    position: relative;
+    margin:30px 20px;
+    border-bottom: 5px solid green;
+    display: flex;
+}
+.nav{
+    width:30% ;
+    height: 95%;
+    display: inline-block;
+    border-right: 5px solid green;
+    margin: 20px;
+}
+.nav li{
+    display: block;
+    margin: 15px;
+}
+.nav>ul{
+    display: block;
+    height: 210px;
+    background-color: aliceblue;
+    box-shadow: -5px -5px 5px inset;
+    margin: 10px; 
+}
+.nav a{
+   text-decoration: none; 
+   font-size: 20px;
+}
+.information{
+    width: 65%;
+    height: 95%;
+    display: inline-block;
+    margin: 30px 10px;
+}
+.header{
+    width: 70%;
+    height: 50px;
+    background-color: green;
+}
+.header h1{
+    font-style: italic;
+    color: beige;
+    letter-spacing: 10px;
+    margin-left: 40px;
+    line-height: 50px;
+}
+.box1{
+    height: 45%;
+    position: relative;
+}
+.box2{
+    height: 55px;
+    position: relative;
+}
+.box1 .text{
+    width: 70%;
+    display: inline-block;
+    color: aliceblue;
+}
+
+.box1 .img{
+    width: 20%;
+    display: inline-block;
+    position: absolute;
+    top:10px;
+    right: 10px;
+    border-left: 5px solid green;
+}
+.box2 p{
+    color: aliceblue;
+}
+.small1,
+.small2{
+    margin: 20px;
+}
+.small1>.head,
+.small2>.head{
+    width: 40%;
+    height: 20px;
+    background-color: green;
+    color: aliceblue;
+}
+.small1>.head p,
+.small2>.head p{
+    margin-left: 5px;
+    color: aliceblue;
+}
+
+.small1 li,
+.small2 li{
+    margin-left: 40px;
+    color: aliceblue;
+}
+.footer p{
+    color: aliceblue;
+    text-align: center;
+    line-height: 60px
+}

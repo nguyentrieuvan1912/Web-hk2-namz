@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .wrapper{
+            position: relative;
+            height: 400px;
+            width: 600px;
+            border: 1px solid palevioletred;
+        }
+        .header{
+            height: 56px;
+            line-height: 56px;
+        }
+        .header .title{
+            text-align: center;
+            font-weight:  bold;
+            font-size: 20px;
+            font-style: italic;
+            color:rgb(146, 44, 61);
+            text-shadow: 0 15px 10px rgb(146, 44, 61);
+        }
+        .nav{
+          height: 20px;
+          border: 0.5px solid palevioletred;
+        }
+        .nav li{
+            display: inline;
+        }
+        .nav li a{
+            text-decoration: none;
+            display: inline-block;
+            margin-left: 20px;
+        }
+        .starter .title{
+            width: 100%;
+            font-size: 30px;
+            color: rgb(213, 34, 64);
+            font-weight: bold;
+            background-color: rgb(244, 217, 226);
+        }
+        .starter-list .list{
+            display: block;position: relative;
+        }
+        .starter-list .list li{
+            margin-left: 40px;
+        }
+        #red{
+            display: inline;
+            font-weight: bold;
+            color: red;
+        }
+        .desserts .title{
+            width: 100%;
+            font-size: 30px;
+            color: rgb(213, 34, 64);
+            font-weight: bold;
+            background-color: rgb(244, 217, 226);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <p class="title">EXAMPLE CAFE MENU</p>
+        </div>
+        <div class="nav">
+            <ul class="options">
+                <li><a href="">Starter</a></li>
+                <li><a href="">Main Coures</a></li>
+                <li><a href="">Desserts</a></li>
+            </ul>
+        </div>
+        <div class="starter">
+            <p class="title">Starter</p>
+            <div class="starter-list">
+                <ul class="list">
+                    <li>Chesnut and Mushroom Goujons <p id="red">(v)</p></li>
+                    <li>Goat Cheese <p id="red">(v)</p></li>
+                    <li>HONEY SOY CHICKEN KEBABS <p id="red">(V)</p></li>
+                    <li>Seafood Salad <p id="red">(v)</p></li>
+                </ul>
+            </div>
+            <div class="btt"><a href="" id="red">Back to Top</a></div>
+        </div>
+        <div class="desserts">
+            <p class="title">Desserts</p>
+            <div class="starter-list">
+                <ul class="list">
+                    <li>Lemon Sorbet <p id="red">(v)</p></li>
+                    <li>Chocolate Mud Pie <p id="red">(v)</p></li>
+                    <li>Pecan Pie <p id="red">(V)</p></li>
+                    <li>Selection of fine Cheese form Around the World <p id="red">(v)</p></li>
+                </ul>
+            </div>
+            <div class="btt"><a href="" id="red">Back to Top</a></div>
+        </div>
+    </div>
+</body>
+
+</html>
