@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="..//css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="..//js/bootstrap.min.js"></script>
+    <style>
+        *{
+            margin: 0px auto;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5 border" style="width: 700px;height : 370px">
+        <form class="row g-3 was-validated">
+            <div class="col-md-4">
+                <label for="firstName" class="form-label">First name</label>
+                <input type="text" class="form-control" id="firstName" placeholder="First name" required>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please choose a first name</div>
+            </div>
+            <div class="col-md-4">
+                <label for="lastName" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="lastName" placeholder="Last name" required>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please choose a last name</div>
+            </div>
+            <div class="col-md-4">
+                <label for="userName" class="form-label">Username</label>
+                <div class="input-group">
+                    <div class="input-group-text">@</div>
+                    <input type="text" class="form-control" id="userName" placeholder="User name" required>
+                    <div class="valid-feedback">Looks good!</div>
+                    <div class="invalid-feedback">Please choose a username</div>
+                </div>
+            </div>
+            <div class="col-md-6 mt-3">
+                <label for="city" class="form-label">City</label>
+                <input type="text" class="form-control" id="city" placeholder="City" required>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please choose a valid city</div>
+            </div>
+            <div class="col-md-3 mt-3">
+                <label for="state" class="form-label">State</label>
+                <input type="text" class="form-control" id="state" placeholder="State" required>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please provide a valid state</div>
+            </div>
+            <div class="col-md-3 mt-3">
+                <label for="zip" class="form-label">Zip</label>
+                <input type="text" class="form-control" id="zip" placeholder="Zip" required>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please provide a valid zip</div>
+            </div>
+            <div class="col-12 mt-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" required>
+                    <label class="form-check-label" for="check">Agree to terms and conditions</label>
+                    <div class="valid-feedback">Looks good!</div>
+                    <div class="invalid-feedback">You must agree before submitting</div>
+                </div>
+            </div>
+            <div class="col-12 mt-4">
+                <button type="submit" class="btn btn-primary">Submit form</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

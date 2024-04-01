@@ -1,0 +1,27 @@
+*{
+    margin: 0px auto;
+    padding: 0px;
+}
+.row {
+    position: relative;
+    left: 150px;
+    top: 100px;
+}
+
+img {
+    width: 300px;
+    height: 250px;
+}   
+
+p {
+    width: 270px;
+    height: auto;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+h2 {
+    margin-top: 25px;
+    margin-left: 10px;
+    font-weight: bold;
+}

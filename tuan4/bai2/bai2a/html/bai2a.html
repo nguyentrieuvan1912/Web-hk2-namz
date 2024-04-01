@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="..//css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="..//js/bootstrap.min.js"></script>
+    <style>
+        .container {
+            border: 1px solid blue;
+            height: 745px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="width: 600px;">
+        <table class="table text-secondary table-hover mb-5 mt-4">
+            <tr >
+                <th>
+                    <h4>Checkout</h4>
+                </th>
+                <th></th>
+            </tr>
+            <tr>
+                <td >
+                    <div class="mt-3">
+                        <h5>Product 1</h5>
+                        Lorem ipsum dolor sit amet
+                    </div>
+                    <div class="mt-3">
+                        <h5>Product 2</h5>
+                        Lorem ipsum dolor sit amet
+                    </div>
+                </td>
+                <td>
+                    <h5 class="mt-3">$200</h5>
+                    <br>
+                    <h5 class="mt-3">$120</h5>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h5 class="mt-3 mb-5">Total</h5>
+                </td>
+                <td>
+                    <h5 class="mt-3 mb-5">$320</h5>
+                </td>
+            </tr>
+        </table>
+        <div class="text-secondary">
+            <h4 >Credit Card Details</h4>
+            <hr>
+            <table>
+                <tr>
+                    <td style="width: 65%; padding-right: 20px;">
+                        <label for="cardhd" class="form-lable mb-3">CARD HOLDER</label>
+                        <input type="text" class="form-control mb-3" placeholder="Card Holder" id="cardhd">
+                    </td>
+                    <td>
+                        <label class="mb-3" for="date">EXPIRATION DATE</label>
+                        <table class="mb-3">
+                            <tr>
+                                <td><input type="text" id="MM" class="form-control" placeholder="MM"></td>
+                                <td>/</td>
+                                <td><input type="text" id="YY" class="form-control" style="float: inline;" placeholder="YY"></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td style="width: 70%; padding-right: 20px;">
+                        <label class="mb-3" for="cardnb">CARD NUMBER</label>
+                        <input type="text " class="form-control mb-3" placeholder="Card Number" id="cardnb">
+                    </td>
+                    <td>
+                        <label class="mb-3" for="cvc">CVC</label>
+                        <input type="text" class="form-control mb-3" placeholder="CVC" id="cvc">
+                    </td>
+                </tr>
+                
+                
+            </table>
+            <div class="d-grid " style="padding-top: 20px; padding-bottom: 20px;">
+                <button type="button" class="btn btn-primary btn-block">Proceed</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

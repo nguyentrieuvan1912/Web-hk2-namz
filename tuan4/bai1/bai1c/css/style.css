@@ -1,0 +1,45 @@
+img {
+    width: 75px;
+    height: 75px;
+    /* border-radius: 100%; */
+}
+
+.col-lg-3 :nth-child(1), 
+.col-lg-2 :nth-child(1), 
+.col-lg-4 :nth-child(1) {
+    font-weight: bold;
+}
+
+p {
+    margin-top: 10px;
+}
+
+tbody tr:nth-child(1) td .btn {
+    background-color: rgb(191, 245, 191);
+    color: green;
+    margin-top: 25px;
+}
+
+tbody tr:nth-child(2) td .btn {
+    background-color: lightblue;
+    color: blue;
+    margin-top: 25px;
+}
+
+tbody tr:nth-child(3) td .btn {
+    background-color: rgb(239, 220, 195);
+    color: firebrick;
+    margin-top: 25px;
+}
+
+
+tr :nth-child(4) p{
+    margin-top: 32px;
+}
+
+tr :nth-child(5) a {
+    position: relative;
+    top: 30px;
+}
+
+
