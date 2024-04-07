@@ -4,9 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thông tin đăng ký</title>
+    <link rel="stylesheet" href="..//css/style.css">
     <link rel="stylesheet" href="..//css/bootstrap.min.css">
     <script src="..///js/jquery-3.7.1.min.js"></script>
     <script src="..///js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-8">
+                <h2 class="text-center">Thông tin đăng ký</h2>
+                <table class="table table-bordered">
+                    <tr>
+                        <td class="r">Họ và tên:</td>
+                        <td><span id="hoTen"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="r">Tên đăng nhập:</td>
+                        <td><span id="tenDangNhap"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="r">Ngày sinh:</td>
+                        <td><span id="ngaySinh"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="r">Điện thoại:</td>
+                        <td><span id="dienThoai"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="r">Địa chỉ:</td>
+                        <td><span id="diaChi"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="r">Email:</td>
+                        <td><span id="email"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="r">Sở thích:</td>
+                        <td><span id="soThich"></span></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
     <script>
         document.getElementById('hoTen').innerText = sessionStorage.getItem('hoTen') || '';
         document.getElementById('tenDangNhap').innerText = sessionStorage.getItem('tenDangNhap') || '';
@@ -17,44 +57,5 @@
         document.getElementById('soThich').innerText = sessionStorage.getItem('soThich') || '';
         
     </script>
-</head>
-<body>
-    <div class="container">
-        <div class="row justify-content-center mt-5">
-            <div class="col-6">
-                <h2 class="text-center">Thông tin đăng ký</h2>
-                <table class="table table-bordered">
-                    <tr>
-                        <td>Họ và tên:</td>
-                        <td><span id="hoTen"></span></td>
-                    </tr>
-                    <tr>
-                        <td>Tên đăng nhập:</td>
-                        <td><span id="tenDangNhap"></span></td>
-                    </tr>
-                    <tr>
-                        <td>Ngày sinh:</td>
-                        <td><span id="ngaySinh"></span></td>
-                    </tr>
-                    <tr>
-                        <td>Điện thoại:</td>
-                        <td><span id="dienThoai"></span></td>
-                    </tr>
-                    <tr>
-                        <td>Địa chỉ:</td>
-                        <td><span id="diaChi"></span></td>
-                    </tr>
-                    <tr>
-                        <td>Email:</td>
-                        <td><span id="email"></span></td>
-                    </tr>
-                    <tr>
-                        <td>Sở thích:</td>
-                        <td><span id="soThich"></span></td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-    </div>
 </body>
 </html>

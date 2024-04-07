@@ -6,7 +6,7 @@
     background-color:rgb(236, 253, 234);
     border: 1px ;
 }
-.table tr td{
+.table tr td {
     color: steelblue;
     font-weight: 500;
 }
@@ -34,4 +34,7 @@ th:nth-child(1),td:nth-child(1) {
 }
 .table th:nth-child(1){
     padding: 0px;
+}
+span{
+    margin-left: 20px;
 }

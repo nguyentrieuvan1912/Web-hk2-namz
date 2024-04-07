@@ -99,7 +99,7 @@ $(document).ready(function() {
         }, 2000);
 
         setTimeout(function() {
-            window.location.href = '..///html/thongtin.html';
+            window.location.href = '..//html/thongtin.html';
         }, 3000);
     })
 })
