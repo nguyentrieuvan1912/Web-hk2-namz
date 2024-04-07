@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="..//css/bootstrap.min.css">
+    <script src="..//js/jquery-3.7.1.min.js"></script>
+    <script src="..//js/bootstrap.min.js"></script>
+    <script src="..//js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Khởi tạo trạng thái ban đầu cho trường "Mua vào" và nút "State"
+            var textMuaVao = document.getElementById('textMuaVao');
+            var btnState = document.getElementById('btnState');
+            textMuaVao.disabled = false;
+            btnState.disabled = true;
+
+            // Xử lý sự kiện khi di chuyển con trỏ ra khỏi trường 'Mua vào'
+            textMuaVao.addEventListener('blur', function() {
+                // Kiểm tra giá trị không rỗng và là số
+                if(this.value.trim() !== '' && !isNaN(this.value)) {
+                    btnState.disabled = false;
+                } else {
+                    btnState.disabled = true;
+                }
+            });
+
+            // Xử lý sự kiện khi chọn loại xe
+            var selectXe = document.getElementById('selectXe');
+            var imgXe = document.querySelector('.table3 .imgXe');
+            var gia = document.querySelector('.table3 .gia');  
+            selectXe.addEventListener("change", function() {
+                var selectedOption = this.options[this.selectedIndex];
+                var selectedOptionValue = selectedOption.value;
+                var selectedOptionValues = selectedOptionValue.split(';');
+                var imageUrl = selectedOptionValues[1];
+                var price = selectedOptionValues[2];
+
+                imgXe.innerHTML = '<img src="' + imageUrl + '" alt="" width="50%">';
+                gia.innerHTML = "Giá: " + price + " USD";
+            });
+
+            // Xử lý sự kiện khi bấm nút "Update"
+            var btnUpdate = document.getElementById("btnUpdate");
+            btnUpdate.addEventListener("click", function() {
+                var radioVang = document.getElementById("vang");
+                var textMuaVaoValue = textMuaVao.value.trim();
+                var textBanRaValue = document.getElementById("textBanRa").value.trim();
+        
+                if (radioVang.checked) {
+                    document.getElementById("vangMuaVao").innerText = textMuaVaoValue;
+                    document.getElementById("vangBanRa").innerText = textBanRaValue;
+                } else {
+                    document.getElementById("usdMuaVao").innerText = textMuaVaoValue;
+                    document.getElementById("usdBanRa").innerText = textBanRaValue;
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container border">
+        <div class="row">
+            <div class="col">
+                <img class="img-fluid" src="..//img/header_img.jpg" alt="" width="100%">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <table class="table table-hover table-bordered text-center table1">
+                    <thead>
+                        <tr>
+                            <th style="color: blue; font-size: 20px;" colspan="2">Bảng tin thị trường</th>
+                        </tr>
+                        <tr>
+                            <th colspan="2">Vàng</th>
+                        </tr>   
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="color: rgb(0, 116, 204); font-weight: bold;">Mua vào</td>
+                            <td style="color: rgb(0, 116, 204);font-weight: bold;">Bán ra</td>
+                        </tr>
+                        <tr>
+                            <td id="vangMuaVao">&nbsp;</td>
+                            <td id="vangBanRa">&nbsp;</td>
+                        </tr>
+                    </tbody>
+                    <thead>
+                        <tr>
+                            <th colspan="2">USD</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="color: rgb(0, 116, 204); font-weight: bold;">Mua vào</td>
+                            <td style="color: rgb(0, 116, 204);font-weight: bold;">Bán ra</td>
+                        </tr>
+                        <tr>
+                            <td id="usdMuaVao">&nbsp;</td>
+                            <td id="usdBanRa">&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-4">
+                <table class="table table-hover table-bordered text-center table2">
+                    <thead>
+                        <tr>
+                            <th style="color: blue; font-size: 20px;" colspan="2">Cập nhật giá cả thị trường</th>
+                        </tr>
+                        <tr>
+                            <th>Mua vào</th>
+                            <th>
+                                <input type="text" name="textMuaVao" id="textMuaVao">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>Bán ra</th>
+                            <th>
+                                <input type="text" name="textBanRa" id="textBanRa">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>Loại xe</th>
+                            <th>
+                                <select name="selectXe" id="selectXe">
+                                    <option value="selected">Chọn loại xe</option>
+                                    <option value="Toyota;..//img/car1.jpg;35000">Toyota</option>
+                                    <option value="KIA;..//img/car2.jpg;15000">KIA</option>
+                                    <option value="Ford;..//img/car3.jpg;40000">Ford</option>
+                                    <option value="Civic;..//img/car4.jpg;32000">Civic</option>
+                                    <option value="Ferrari;..//img/car5.jpg;50000">Ferrari</option>
+                                    <option value="Mercedes;..//img/car6.jpg;45000">Mercedes</option>
+                                </select>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th>
+                                <label for="vang">
+                                    <input type="radio" name="radio" id="vang">Vàng
+                                </label>
+                                <label for="usd">
+                                    <input type="radio" name="radio" id="usd">USD
+                                </label>
+                            </th>
+                        </tr> 
+                        <tr>
+                            <th></th>
+                            <th>
+                                <button id="btnUpdate" class="btn btn-light btn-outline-secondary" type="button">Update</button>
+                                <button id="btnState" class="btn btn-light btn-outline-secondary" type="button" disabled>State</button>
+                            </th>
+                        </tr>  
+                    </thead>
+                </table>    
+            </div>
+            <div class="col-md-4">
+                <table class="table table-hover table-bordered text-center table3">
+                    <thead>
+                        <tr>
+                            <th style="color: blue; font-size: 20px;">Bảng báo giá</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="thongTin">
+                                <p style="text-align: justify; color: rgb(0, 116, 204); font-weight: bold;">
+                                    - Với kiểu dáng thể thao, sang trọng <br>
+                                    - Nổi bật, ít tốn nhiên liệu <br>
+                                    - Kiểu dáng thể thao
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <thead>
+                        <tr>
+                            <th class="imgXe">&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="text-align: justify; font-weight: bold; color: green" class="gia">&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

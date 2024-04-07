@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="..//css/style.css">
+    <link rel="stylesheet" href="..//css/bootstrap.min.css">
+    <script src="..//js/jquery-3.7.1.min.js"></script>
+    <script src="..//js/bootstrap.min.js"></script>
+    <script src="..//js/form.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div style="border: purple solid 1px;;" class="col-12">
+                <p class="title">Register Form</p>
+                <!-- Message  -->
+                <div id="error-message" class="text-danger mt-3"></div>
+                <div id="success-message" class="text-success mt-3"></div>
+                <table class="table">
+                    <tr>
+                        <td class="r">Họ và tên (*):</td>
+                        <td><input class="form-control" type="text" name="hoTen" id="hoTen"></td>
+                    </tr>
+                    <tr>
+                        <td class="r">Tên đăng nhập (*):</td>
+                        <td><input class="form-control" type="text" name="tenDangNhap" id="tenDangNhap"></td>
+                    </tr>
+                    <tr>
+                        <td class="r">Mật khẩu (*):</td>
+                        <td><input class="form-control" type="password" name="matKhau" id="matKhau"></td>
+                    </tr>
+                    <tr>
+                        <td class="r">Xác nhận mật khẩu (*):</td>
+                        <td><input class="form-control" type="password" name="xnMK" id="xnMK"></td>
+                    </tr>
+                    <tr>
+                        <td class="r">Ngày sinh:</td>
+                        <td><input type="date" name="ngaySinh" id="ngaySinh"></td>
+                    </tr>
+                    <tr>
+                        <td class="r">Điện thoại:</td>
+                        <td><input class="form-control" type="text" name="di    enThoai" id="dienThoai"></td>
+                    </tr>
+                    <tr>
+                        <td class="r">Địa chỉ:</td>
+                        <td><input class="form-control" type="text" name="diaChi" id="diaChi"></td>
+                    </tr>
+                    <tr>
+                        <td class="r">Email khác:</td>
+                        <td><input class="form-control" type="email" name="email" id="email"></td>
+                    </tr>
+                    <tr>
+                        <td class="r">Sở thích:</td>
+                        <td>
+                            <select class="form-select-sm" name="selectSoThich" id="selectSoThich">
+                                <option value="Ca nhạc">Ca nhạc</option selected>
+                                <option value="Nhay">Nhảy</option>
+                                <option value="Doc sach">Đọc sách</option>
+                                <option value="Nghe nhac">Nghe nhạc</option>
+                                <option value="Kham pha">Khám phá</option>
+                                <option value="Du lich">Du lịch</option>
+                                <option value="Nau an">Nấu ăn</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <button id="dangKy" class="btn btn-outline-dark btn-sm" type="button">Đăng ký</button>
+                            <button id="huy" class="btn btn-outline-dark btn-sm" type="button">Hủy</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

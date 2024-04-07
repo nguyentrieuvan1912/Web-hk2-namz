@@ -1,0 +1,11 @@
+.table1 thead tr th {
+    background-color: rgb(208, 206, 206);
+}
+
+.table2 thead tr th, tr td {
+    background-color: rgb(208, 206, 206);
+}
+
+.table3 thead tr th {
+    background-color: rgb(208, 206, 206);
+}

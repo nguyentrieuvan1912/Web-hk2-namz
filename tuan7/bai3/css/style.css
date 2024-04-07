@@ -1,0 +1,37 @@
+*{
+    margin: 0px auto;
+    padding: 0px;
+}
+.container{
+    background-color:rgb(236, 253, 234);
+    border: 1px ;
+}
+.table tr td{
+    color: steelblue;
+    font-weight: 500;
+}
+.title{
+    text-align: center;
+    color: blue;
+    margin-top: 15px;
+    font-weight: 500;
+}
+.r{
+    padding: 8px;
+    text-align: right;
+}
+tr,td{
+    border: 2px solid green;
+}
+.table td{
+    height: 20px;
+}
+th:nth-child(1),td:nth-child(1) {
+   width: 30%; /* Chiều rộng của cột đầu tiên */
+}
+.table .form-control{
+    width: 300px;
+}
+.table th:nth-child(1){
+    padding: 0px;
+}
