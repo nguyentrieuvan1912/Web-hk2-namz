@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/code.jquery.com_jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <style>
+        .container-fluid{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .form-control{
+            width: 800px;
+            height: auto;
+        }
+        .table_1{
+            width: 100%;
+        }
+        .table_1 tr td:nth-child(1){
+            width: 100px;
+        }
+        input[type="text"]{
+            width: 50%;
+            height: 30px;
+            margin-bottom: 4px;
+        }
+        select{
+            width: 50%;
+            height: 30px;
+            margin-bottom: 4px;
+        }
+        #table_2{
+            width: 100%;
+        }
+        #table_2 td,
+        #table_2 th{
+            height: 36px;
+        }
+        #table_2, #table_2 th, #table_2 td {
+            border: 1px solid black;
+        }
+        #table_2{
+            padding: 4px;
+        }
+        button{
+            width: 120px;
+            margin: 20px 0;
+            border-color: #ccc;
+        }
+        .mauDo{
+            color: red;
+        }
+       
+    </style>
+    <!-- <script>
+        $(document).ready(function () {
+            $("#btn").attr("disabled", true);
+            function kiemTraHoTen(gt,loi){
+                let kiemTra = /^([A-Z][a-z]*\s)+([A-Z][a-z]*)$/;
+                if(!kiemTra.test(gt)){
+                    $(loi).html("Họ tên phải viết hoa chữ cái đầu");
+                    $(loi).addClass("mauDo");
+                    return false;
+                }else{
+                    $(loi).html("*");
+                    $(loi).removeClass("mauDo");
+                    return true;
+                }
+            }
+
+            $("#txtHT").blur(function (e) { 
+                let gt = $("#txtHT").val();
+                if(kiemTraHoTen(gt,"#tbHT")){
+                    $("#btn").attr("disabled", false);
+                }else{
+                    $("#btn").attr("disabled", true);
+                }
+            });
+
+            $("#btn").click(function (e) { 
+                e.preventDefault();
+                let hoTen = $("#txtHT").val();
+                let lop = $("#listLop").val();
+                let monHoc = $("#listMon").val();
+                let loai = $("input[type='radio']:checked").val();
+                let them = "<tr><td>" + hoTen + "</td><td>" + lop + "</td><td>" + monHoc + "</td><td>" + loai + "</td></tr>";
+                $("#table_2").append(them);
+            });
+        });
+    </script> -->
+</head>
+<body>
+    <div class="container-fluid">
+        <form class="form-control">
+            <table class="table_1">
+                <tbody>
+                    <tr>
+                        <td>
+                            <label for="hoTen">Họ tên:</label>
+                        </td>
+                        <td>
+                            <input type="text" id="txtHT">
+                            <span id="tbHT">*</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="hoTen">Lớp:</label>
+                        </td>
+                        <td>
+                            <select id="listLop">
+                                <option value="Đại học kĩ thuật phần mềm 18A">Đại học kĩ thuật phần mềm 18A</option>
+                                <option value="Đại học kĩ thuật phần mềm 18B">Đại học kĩ thuật phần mềm 18B</option>
+                                <option value="Đại học kĩ thuật phần mềm 18C">Đại học kĩ thuật phần mềm 18C</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="hoTen">Môn học:</label>
+                        </td>
+                        <td>
+                            <select id="listMon">
+                                <option value="Lập trình hướng đối tượng">Lập trình hướng đối tượng</option>
+                                <option value="Kĩ thuật lập trình">Kĩ thuật lập trình</option>
+                                <option value="Lập trình hướng sự kiện">Lập trình hướng sự kiện</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="hoTen">Loại:</label>
+                        </td>
+                        <td>
+                            <input type="radio" value="Lý thuyết" name="loai">
+                            <label for="lt">Lý thuyết</label>
+                            <input type="radio" value="Thực hành" name="loai">
+                            <label for="th">Thực hành</label>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="button" id="btn">Đăng ký</button>
+            <table id="table_2" class="text-center">
+                <thead>
+                    <tr>
+                        <th>Họ tên</th>
+                        <th>Lớp</th>
+                        <th>Môn học đăng ký</th>
+                        <th>Loại</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

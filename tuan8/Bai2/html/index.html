@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/code.jquery.com_jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <style>
+        .container-fluid{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        form{
+            width: 800px;
+        }
+        table, th, td{
+            border: 1px solid #000;
+        }
+        .img{
+            width: 130px;
+            height: 130px;
+        }
+        img{
+            width: 100%;
+            height: 100%;    
+        }
+        th, td{
+            padding: 4px;
+        }
+    </style>
+    <!-- <script>
+        $(document).ready(function () {
+            $("input[type='text']").change(function (e) { 
+               let total =  parseFloat($("#gia1").html())*$("#soLuong_1").val() + parseFloat($("#gia2").html())*$("#soLuong_2").val() + parseFloat($("#gia3").html())*$("#soLuong_3").val() + parseFloat($("#gia4").html())*$("#soLuong_4").val() + parseFloat($("#gia5").html())*$("#soLuong_5").val();
+               $("#total").html(total);
+            });
+        });
+    </script> -->
+</head>
+<body>
+    <div class="container-fluid">
+        <form>
+            <table style="width: 100%">
+                <thead class="text-center">
+                    <tr>
+                        <th>STT</th>
+                        <th>Hình ảnh</th>
+                        <th>Giá</th>
+                        <th>Số lượng</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <div class="img">
+                                <img src="../img/hinh1.jpg" alt="">
+                            </div>
+                        </td>
+                        <td>
+                            <span id="gia1">20000</span>
+                        </td>
+                        <td>
+                            <input type="text" id="soLuong_1" value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>
+                            <div class="img">
+                                <img src="../img/hinh2.jpg" alt="">
+                            </div>
+                        </td>
+                        <td>
+                            <span id="gia2">40000</span>
+                        </td>
+                        <td>
+                            <input type="text" id="soLuong_2" value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>
+                            <div class="img">
+                                <img src="../img/hinh3.jpg" alt="">
+                            </div>
+                        </td>
+                        <td>
+                            <span id="gia3">30000</span>
+                        </td>
+                        <td>
+                            <input type="text" id="soLuong_3" value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>
+                            <div class="img">
+                                <img src="../img/hinh4.jpg" alt="">
+                            </div>
+                        </td>
+                        <td>
+                            <span id="gia4">50000</span>
+                        </td>
+                        <td>
+                            <input type="text" id="soLuong_4" value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>
+                            <div class="img">
+                                <img src="../img/hinh5.jpg" alt="">
+                            </div>
+                        </td>
+                        <td>
+                            <span id="gia5">30000</span>
+                        </td>
+                        <td>
+                            <input type="text" id="soLuong_5" value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            Tổng giá tiền
+                        </td>
+                        <td>
+                            <span id="total">0</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

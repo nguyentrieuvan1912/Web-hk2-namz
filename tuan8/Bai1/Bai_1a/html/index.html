@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/code.jquery.com_jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <style>
+        .container-fluid{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        form{
+            width: 840px;
+            min-height: 700px;
+            border: 1px solid #000;
+            border-radius: 10px;
+        }
+
+        tr td:nth-child(1){
+            text-align: right;
+            width: 200px;
+        }
+        p{
+            margin: 0;
+            padding: 0;
+        }
+        input{
+            height: 32px;
+            padding: 4px;
+        }
+        input[type="text"]{
+            width: 300px;
+        }
+        input[type="date"]{
+            width: 220px;
+        }
+        input[type="tel"]{
+            width: 300px;
+        }
+        input[type="email"]{
+            width: 300px;
+        }
+        input[type="radio"]{
+            height: 12px;
+        }
+        .table{
+            border-top: none;
+        }
+        .table thead th{
+            border-top: none;
+            border-bottom: none;
+        }
+
+        .table td{
+            font-size: 18px;
+            padding: 8px;
+        }
+        button{
+            border-radius: 4px;
+            background-color: #000;
+            color: #fff;
+        }
+        .mauDo{
+            color: red;
+        }
+    </style>
+    <!-- <script>
+        $(document).ready(function () {
+            $("#txtTenDN").focus();
+
+            function kiemTraTenDangNhap(gt,loi){
+                let kiemTra = /^[a-zA-Z][a-zA-Z0-9@#$%^&+=]*$/;
+                if(!kiemTra.test(gt)){
+                    $(loi).html("Bắt đầu là ký tự, có hoặc không có ký tự số, ký tự đặc biệt và không được có khoảng trắng.");
+                    $(loi).addClass("mauDo");
+                    return false;
+                }else{
+                    $(loi).html("*");
+                    $(loi).removeClass("mauDo");
+                    return true;
+                }
+            }
+
+            $("#txtTenDN").blur(function (e) { 
+                e.preventDefault();
+                let tenDN = $("#txtTenDN").val();
+                kiemTraTenDangNhap(tenDN,"#erDN");
+            });
+
+            function kiemTraMatKhau(gt,loi){
+                let kiemTra = /^(?=.*[0-9])(?=.*[A-Z])(?=.*[!@#$%^&*()]).{8,}$/;
+                if(!kiemTra.test(gt)){
+                    $(loi).html("Mật khẩu từ 8 ký tự trở lên, ít nhất 1 ký tự só, 1 ký tự viết hoa, 1 ký tự đặt biệt");
+                    $(loi).addClass("mauDo");
+                    return false;
+                }else{
+                    $(loi).html("*");
+                    $(loi).removeClass("mauDo");
+                    return true;
+                }
+            }
+
+            $("#txtMK").blur(function (e) { 
+                e.preventDefault();
+                let mk = $("#txtMK").val();
+                kiemTraMatKhau(mk,"#erMK");
+            });
+
+            function kiemTraXacNhanMatKhau(gt,gt_2,loi){
+                if(gt!==gt_2){
+                    $(loi).html("Nhập lại mật khẩu phải giống Mật khẩu.");
+                    $(loi).addClass("mauDo");
+                    return false;
+                }else{
+                    $(loi).html("*");
+                    $(loi).removeClass("mauDo");
+                    return true;
+                }
+            }
+
+            $("#txtXNMK").blur(function (e) { 
+                e.preventDefault();
+                let mk = $("#txtMK").val();
+                let XNMK = $("#txtXNMK").val();
+                if(kiemTraMatKhau(XNMK,"#erXNMK")){
+                    kiemTraXacNhanMatKhau(mk,XNMK,"#erXNMK");
+                }
+            });
+
+            function kiemTraHoTen(gt,loi){
+                let kiemTra = /^([A-Z][a-z]*\s)+([A-Z][a-z]*)$/;
+                if(!kiemTra.test(gt)){
+                    $(loi).html("Phải có ít nhất Họ, Tên. Ký tự đầu bắt buộc phải viết hoa.");
+                    $(loi).addClass("mauDo");
+                    return false;
+                }else{
+                    $(loi).html("*");
+                    $(loi).removeClass("mauDo");
+                    return true;
+                }
+            }
+
+            $("#txtName").blur(function (e) { 
+                e.preventDefault();
+                let hoTen = $("#txtName").val();
+                kiemTraHoTen(hoTen,"#erName");
+            });
+
+            function kiemTraNgayThangNamSinh(gt,loi){
+                gt = new Date(gt);
+                let today = new Date();
+                let tuoi = today.getFullYear() - gt.getFullYear();
+                if(tuoi <= 16){
+                    $(loi).html("Ngày tháng năm sinh phải trên 16 tuổi.");
+                    $(loi).addClass("mauDo");
+                    return false;
+                }else{
+                    $(loi).html("*");
+                    $(loi).removeClass("mauDo");
+                    return true;
+                }
+            }
+
+            $("#txtNgaySinh").change(function (e) { 
+                e.preventDefault();
+                let date = $("#txtNgaySinh").val();
+                kiemTraNgayThangNamSinh(date,"#erNgaySinh")
+            });
+
+            function kiemTraDiaChi(gt,loi){
+                let kiemTra = /^[A-Za-z0-9, ]+$/;
+                if(!kiemTra.test(gt)){
+                    $(loi).html("Địa chỉ không được để trống.");
+                    $(loi).addClass("mauDo");
+                    return false;
+                }else{
+                    $(loi).html("*");
+                    $(loi).removeClass("mauDo");
+                    return true;
+                }
+            }
+
+            $("#txtDC").blur(function (e) { 
+                e.preventDefault();
+                let diaChi = $("#txtDC").val();
+                kiemTraDiaChi(diaChi,"#erDC");
+            });
+
+            function kiemTraSoDienThoai(gt,loi){
+                let kiemTra = /^(09|03|07|06|05|04)\d{8}$/;
+                if(!kiemTra.test(gt)){
+                    $(loi).html("Số điện thoại 10 ký tự số, bắt đầu là 09, 03, 07, 06, 05, 04");
+                    $(loi).addClass("mauDo");
+                    return false;
+                }else{
+                    $(loi).html("*");
+                    $(loi).removeClass("mauDo");
+                    return true;
+                }
+            }
+
+            $("#txtDT").blur(function (e) { 
+                e.preventDefault();
+                let dienThoai = $("#txtDT").val();
+                kiemTraSoDienThoai(dienThoai,"#erDT");
+            });
+
+            function kiemTraEmail(gt,loi){
+                let kiemTra = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+                if(!kiemTra.test(gt)){
+                    $(loi).html("Email phải đúng định dạng của địa chỉ email.");
+                    $(loi).addClass("mauDo");
+                    return false;
+                }else{
+                    $(loi).html("*");
+                    $(loi).removeClass("mauDo");
+                    return true;
+                }
+            }
+
+            $("#txtEmail").blur(function (e) { 
+                e.preventDefault();
+                let email = $("#txtEmail").val();
+                kiemTraEmail(email,"#erEmail"); 
+            });
+        });
+    </script> -->
+</head>
+<body>
+    <div class="container-fluid">
+        <form>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th colspan="2" style="border-top: none;">
+                            <p class="text-uppercase text-center" style="font-size: 30px;">Đăng ký tài khoản</p>
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td style="border-top: none;">Tên đăng nhập:</td>
+                        <td style="border-top: none;">
+                            <input type="text" id="txtTenDN" placeholder="txtDN">
+                            <span id="erDN">*</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Mật khẩu:</td>
+                        <td>
+                            <input type="text" id="txtMK" placeholder="txtMK">
+                            <span id="erMK">*</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Nhập lại mật khẩu:</td>
+                        <td>
+                            <input type="text" id="txtXNMK" placeholder="txtXNMK">
+                            <span id="erXNMK">*</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th colspan="2">
+                            <p class="text-uppercase text-center">Thông tin cá nhân</p>
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td style="border-top: none;">Họ và tên:</td>
+                        <td style="border-top: none;">
+                            <input type="text" id="txtName" placeholder="txtName">
+                            <span id="erName">*</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Ngày sinh:</td>
+                        <td>
+                            <input type="date" id="txtNgaySinh">
+                            <span id="erNgaySinh">*</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Giới tính:</td>
+                        <td>
+                            <input type="radio" name="gioiTinh" value="1">
+                            <label for="Nam">Nam</label>
+                            <input type="radio" name="gioiTinh" value="0">
+                            <label for="Nu">Nữ</label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Địa chỉ:</td>
+                        <td>
+                            <input type="text" id="txtDC" placeholder="txtDC">
+                            <span id="erDC">*</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Điện thoại:</td>
+                        <td>
+                            <input type="tel" id="txtDT" placeholder="txtDT">
+                            <span id="erDT">*</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Email:</td>
+                        <td>
+                            <input type="email" id="txtEmail" placeholder="txtEmail">
+                            <span id="erEmail">*</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td>
+                            <button type="button" style="margin-left: 100px;">Đăng ký</button>
+                            <button type="button">Hủy</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/code.jquery.com_jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <style>
+        header{
+            background-color: #3b5798;
+            height: 90px;
+        }
+        header p{
+            line-height: 90px;
+            font-size: 58px;
+            color: #fff;
+            font-weight: 500;
+            margin: 0;
+            margin-left: 10px;
+        }
+        form{
+            color: #fff;
+        }
+        button{
+            color: #fff;
+            background-color: #576c9f;
+            border-color: #3b5798;
+            width: 100%;
+        }
+        [class*=col-]{
+            padding: 0;
+            margin: 0;
+        }
+        input[type="email"]{
+            width: 100%;
+        }
+        input[type="password"]{
+            width: 100%;
+        }
+        header a{
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.5s ;
+
+        }
+        header a:hover{
+            color: #ccc;
+            text-decoration: none;
+        }
+        .form-group{
+            margin: 0;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        .img{
+            width: 100%;
+            height: 460px;
+        }
+        .col-4{
+            padding: 4px;
+        }
+        form > .row{
+            width: 640px;
+            height: 90px;
+        }
+        section{
+            background-color: #e5e6fb;
+        }
+        section h1{
+            color: #8692a9;
+            font-size: 54px;
+            /* word-spacing: 0px; */
+            margin: 0 30px;
+            text-align: center;
+            font-weight: 500;
+            line-height: 1.2;
+            padding: 0 40px;
+        }
+        section p{
+            margin-top: 40px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        section form{
+            width: 900px;
+            padding: 50px 40px;
+            margin-left: 30px;
+        }
+        section form input{
+           width: 100%;
+           height: 36px;
+           padding: 4px;
+           margin-top: 10px;
+           border: 2px solid #000;
+           border-radius: 4px;
+        }
+        section form button{
+            margin: 14px 0;
+        }
+
+        section h2{
+            color: #000;
+            font-size: 58px;
+            font-weight: 500;
+        }
+
+        section h6{
+            color: #000;
+            font-size: 26px;
+            margin: 34px 0px;    
+        }
+        span{
+            color: #000;
+        }
+        .mauDo{
+            color: red;
+        }
+        .tb{
+            position: absolute!important;
+            right: 220px!important;
+        }
+    </style>
+    <!-- <script>
+        $(document).ready(function () {
+            function kiemTraHo(gt,loi){
+                let kiemTra = /^([A-Z][a-z]*\s?)+$/;
+                if(!kiemTra.test(gt)){
+                    $(loi).html("Họ phải viết hoa chữ cái đầu");
+                    $(loi).addClass("mauDo");
+                    return false;
+                }else{
+                    $(loi).html("*");
+                    $(loi).removeClass("mauDo");
+                    return true;
+                }
+            }
+
+            function kiemTraTen(gt,loi){
+                let kiemTra = /^([A-Z][a-z]*)$/;
+                if(!kiemTra.test(gt)){
+                    $(loi).html("Tên phải viết hoa chữ cái đầu");
+                    $(loi).addClass("mauDo");
+                    $(loi).addClass("tb");
+                    return false;
+                }else{
+                    $(loi).html("*");
+                    $(loi).removeClass("mauDo");
+                    $(loi).removeClass("tb");
+                    return true;
+                }
+            }
+
+            function kiemTraMatKhau(gt,loi){
+                let kiemTra = /^(?=.*[0-9])(?=.*[A-Z])(?=.*[!@#$%^&*()]).{8,}$/;
+                if(!kiemTra.test(gt)){
+                    $(loi).html("Mật khẩu từ 8 ký tự trở lên, ít nhất 1 ký tự só, 1 ký tự viết hoa, 1 ký tự đặt biệt");
+                    $(loi).addClass("mauDo");
+                    return false;
+                }else{
+                    $(loi).html("*");
+                    $(loi).removeClass("mauDo");
+                    return true;
+                }
+            }
+
+            function kiemTraEmail(gt,loi){
+                let kiemTra = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+                if(!kiemTra.test(gt)){
+                    $(loi).html("Email phải nhập theo form kết thúc bằng @gmail.com");
+                    $(loi).addClass("mauDo");
+                    return false;
+                }else{
+                    $(loi).html("*");
+                    $(loi).removeClass("mauDo");
+                    return true;
+                }
+            }
+
+            function kiemTraEmailKhop(gt,gt_2,loi){
+                if(gt!==gt_2){
+                    $(loi).html("Email phải khớp");
+                    $(loi).addClass("mauDo");
+                    return false;
+                }else{
+                    $(loi).html("*");
+                    $(loi).removeClass("mauDo");
+                    return true;
+                }
+            }
+
+            function kiemTraNamSinh(gt, loi) {
+                gt = parseInt(gt);
+                if (isNaN(gt)) {
+                    $(loi).html("Năm sinh không hợp lệ");
+                    $(loi).addClass("mauDo");
+                    return false;
+                }
+
+                if (gt < 2002) {
+                    $(loi).html("*");
+                    $(loi).removeClass("mauDo");
+                    return true;
+                } else {
+                    $(loi).html("Năm sinh phải trước năm 2002");
+                    $(loi).addClass("mauDo");
+                    return false;
+                }
+            }
+
+            $("#txtHo").focus();
+
+            $("#txtHo").blur(function (e) { 
+                let ho = $("#txtHo").val();
+                kiemTraHo(ho,"#tbHo");
+            });
+
+            $("#txtTen").blur(function (e) { 
+                let ten = $("#txtTen").val();
+                kiemTraTen(ten,"#tbTen");
+            });
+
+            $("#txtEmail").blur(function (e) { 
+                let email = $("#txtEmail").val();
+                kiemTraEmail(email,"#tbEmail");
+            });
+
+            $("#txtEmailNL").blur(function (e) { 
+                let email = $("#txtEmail").val();
+                let emailN = $("#txtEmailNL").val();
+                if(kiemTraEmail(emailN,"#tbEmailNL")){
+                    kiemTraEmailKhop(emailN,email,"#tbEmailNL");
+                }
+            });
+
+            $("#txtPass").blur(function (e) { 
+                let pass = $("#txtPass").val();
+                kiemTraMatKhau(pass,"#tbPass");
+            });
+
+            $("#txtNamSinh").blur(function (e) { 
+                let namSinh = $("#txtNamSinh").val();
+                namSinh = parseInt(namSinh);
+                keimTraNamSinh(namSinh,"tbNamSinh");
+            });
+
+            $("#btn_dangKy").click(function (e) { 
+                let ho = $("#txtHo").val();
+                let ten = $("#txtTen").val();
+                let email = $("#txtEmail").val();
+                let emailN = $("#txtEmailNL").val();
+                let pass = $("#txtPass").val();
+                let namSinh = $("#txtNamSinh").val();
+                if(!kiemTraHo(ho,"#tbHo")){
+                    $("#txtHo").focus();
+                    return false;
+                }
+                if(!kiemTraTen(ten,"#tbTen")){
+                    $("#txtTen").focus();
+                    return false;
+                }
+                if(!kiemTraEmail(email,"#tbEmail")){
+                    $("#txtEmail").focus();
+                    return false;
+                }
+                if(!kiemTraEmail(emailN,"#tbEmailNL")){
+                    $("#txtEmailNL").focus();
+                    return false;
+                }
+                if(kiemTraEmail(emailN,"#tbEmailNL")){
+                    if(!kiemTraEmailKhop(emailN,email,"#tbEmailNL")){
+                        $("#txtEmailNL").focus(); 
+                        return false;
+                    }
+                }
+                if(!kiemTraMatKhau(pass,"#tbPass")){
+                    $("#txtPass").focus();
+                    return false;
+                }
+                if(!kiemTraNamSinh(namSinh,"#tbNamSinh")){
+                    $("#txtNamSinh").focus();
+                    return false;
+                }
+                alert("Bạn đăng ký thành công");
+                return true;
+            });
+        });
+    </script> -->
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header class="row">
+            <div class="col-7">
+                <p>facbook</p>
+            </div>
+            <div class="col-5">
+                <form>
+                    <div class="row d-flex justify-content-around">
+                        <div class="col-4">
+                            <div class="form-group">
+                                <label for="txtEmailH">Email</label>
+                                <input type="email" id="txtEmailH">
+                                <div class="form-check-inline">
+                                    <input type="checkbox">
+                                    <label for="">Kiểm tra</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+        
+                            </div>
+                            <div class="form-group"></div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-group">
+                                <label for="txtPassH">Mật khẩu</label>
+                                <input type="password" id="txtPassH">
+                                <a href="#">Quên tài khoản</a>
+                            </div>
+                            <div class="form-group">
+        
+                            </div>
+                            <div class="form-group"></div>
+                        </div>
+                        <div class="col-2 d-flex align-items-center justify-content-center">
+                            <button type="button">Đăng nhập</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </header>
+        <section class="row">
+            <div class="col-4">
+                <div class="img">
+                    <img src="../img/hinh.png" alt="">
+                </div>
+                <h1>Cảm ơn bạn đã ghé thăm!</h1>
+                <p>Chúng tôi mong được gặp lại bạn</p>
+            </div>
+            <div class="col-7">
+                <form>
+                    <h2>Đăng ký</h2>
+                    <h6>Miễn phí và sẽ luôn như vậy</h6>
+                    <input type="text" placeholder="Họ" style="width: 48%" id="txtHo">
+                    <input type="text" placeholder="Tên" style="width: 48%" id="txtTen">
+                    <br>
+                    <span id="tbHo">*</span>
+                    <span style="position: absolute;right: 47%;" id="tbTen">*</span>
+                    <input type="email" placeholder="Email đăng nhập" id="txtEmail">
+                    <span id="tbEmail">*</span>
+                    <input type="email" placeholder="Nhập lại Email." id="txtEmailNL">
+                    <span id="tbEmailNL">*</span>
+                    <input type="password" placeholder="Mật khẩu" id="txtPass">
+                    <span id="tbPass">*</span>
+                    <input type="text" placeholder="Năm sinh" id="txtNamSinh">
+                    <span id="tbNamSinh">*</span>
+                    <br>
+                    <button type="button" style="width: 50%;height: 36px;background-color: green;color: #fff;" id="btn_dangKy">Đăng ký</button>
+                </form>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
